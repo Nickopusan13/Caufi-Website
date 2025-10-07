@@ -3,7 +3,6 @@ import hashlib
 import time
 import bleach
 from slugify import slugify
-from bleach.linkifier import LinkifyFilter
 import html
 
 pwd_context = CryptContext(schemes=['bcrypt'])

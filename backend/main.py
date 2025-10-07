@@ -8,9 +8,8 @@ from starlette.middleware.sessions import SessionMiddleware
 from dotenv import load_dotenv
 import os
 
-path = "C:/Freelance/Website/my-project/.env"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-load_dotenv(dotenv_path=path)
+load_dotenv()
 
 @asynccontextmanager
 async def lifespan(app:FastAPI):

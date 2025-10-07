@@ -6,7 +6,6 @@ import WomenSection from "@/components/home/WomenSec";
 import Quotes from "@/components/home/Quotes";
 import Promo from "@/components/home/Promo";
 import Footer from "@/components/Footer";
-import { fetchHome } from "@/utils/api";
 
 export const metadata: Metadata = {
   title: "Caufi",
@@ -14,14 +13,10 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const data = await fetchHome();
   return (
     <>
       <NavBar />
       <main className="bg-white grow dark:bg-zinc-900 min-h-screen w-full h-full pt-19 lg:pt-20 sm:pt-12 transition-all duration-300 overflow-x-clip">
-        <div className="bg-black">
-          <h1>{data.message}</h1>
-        </div>
         <ImageScroller />
         <MenSection />
         <div className="border-1 my-3 lg:my-8 border-[#ABABAB]"></div>

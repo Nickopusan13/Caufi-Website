@@ -15,7 +15,7 @@ export default function AdminMain({ children }: { children: ReactNode }) {
         }`}
       >
         <AdminHeader setShowMenu={setShowMenu} />
-        <main className="pt-18 flex-1 bg-neutral-50 p-4 flex flex-col gap-3">
+        <main className="pt-18 flex-1 bg-zinc-900 p-4 flex flex-col gap-3">
           {children}
         </main>
       </div>

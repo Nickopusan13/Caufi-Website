@@ -1,7 +1,14 @@
 "use client";
 
 import { weeklySales } from "@/components/admin/item";
-import { Bar, ResponsiveContainer, BarChart, Tooltip, XAxis } from "recharts";
+import {
+  Bar,
+  ResponsiveContainer,
+  BarChart,
+  Tooltip,
+  XAxis,
+  Cell,
+} from "recharts";
 import { IoMdTrendingUp } from "react-icons/io";
 
 interface DataItem {
@@ -16,13 +23,13 @@ interface CustomTooltipProps {
 
 export default function WeeklySales() {
   return (
-    <div className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-md w-90">
+    <div className="flex items-center gap-4 p-6 bg-zinc-900 rounded-2xl shadow-md w-90">
       <div className="flex flex-col justify-center gap-1">
         <p className="font-semibold text-sm text-gray-600">Weekly Sales</p>
-        <p className="text-xl font-bold text-gray-800 before:content-['Rp.']">
+        <p className="text-xl font-bold text-gray-500 before:content-['Rp.']">
           1.200.000
         </p>
-        <span className="text-xs flex items-center gap-1 bg-green-100 text-green-700 rounded-full px-2 py-0.5 w-fit">
+        <span className="text-xs flex items-center gap-1 bg-green-600 text-green-200 rounded-full px-2 py-0.5 w-fit">
           <IoMdTrendingUp />
           3.5%
         </span>
@@ -45,7 +52,12 @@ export default function WeeklySales() {
                 return null;
               }}
             />
-            <Bar dataKey="sales" fill="blue" radius={[20, 20, 0, 0]} />
+            <Bar
+              className="hover:bg-zinc-900"
+              dataKey="sales"
+              fill="blue"
+              radius={[20, 20, 0, 0]}
+            />
           </BarChart>
         </ResponsiveContainer>
       </div>

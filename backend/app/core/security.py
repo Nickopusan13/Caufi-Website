@@ -10,8 +10,7 @@ from email.message import EmailMessage
 import os
 import smtplib
 
-path = "C:\Freelance\Website\my-project\backend\.env"
-load_dotenv(dotenv_path=path)
+load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITM = "HS256"
 ACCESS_TOKEN_EXPIRE = timedelta(days=7)

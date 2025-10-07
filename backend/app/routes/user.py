@@ -6,7 +6,6 @@ from sqlalchemy import select
 from app.db.models.user import User, UserAddress
 from sqlalchemy.orm import selectinload
 
-
 router = APIRouter()
 
 @router.get("/api/users", response_model=list[UserOut])
